@@ -437,8 +437,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 /* sp-card title */
   #special .sp-mb-cardWrap .sp-mb-title {
-    width: 100%; height: 8%; box-sizing: border-box;
-    line-height: 1.3;  
+    width: 100%; height: 10%; 
+    line-height: 1.3;
   }
 
   #special .sp-mb-cardWrap .sp-mb-title>span {
@@ -448,7 +448,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 
   #special .sp-mb-cardWrap .sp-mb-title h2 {
-    font-size: 1.5rem; 
+    font-size: 1.825rem; 
     font-weight: 700;
     color: #808080;
   }
@@ -459,7 +459,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
   #special .sp-mb-cardWrap .sp-mb-card {
     width: 100%;
-    height: 92%; 
+    height: 90%; 
     display: flex;
     flex-wrap: nowrap;
     box-sizing: border-box;
@@ -508,7 +508,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 
   #special .sp-mb-cardWrap .sp-mb-card>div .sp-card-txt p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.4;
     font-weight: 700;
     color: #000;
@@ -578,7 +578,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom .sp-card-img {
     width: 100%; height: 100%;
     background: url(../images/special-img5.jpg) no-repeat bottom / cover;
-    transform: scale(1) translateY(5%);
+    transform: scale(1) translateY(10%);
   }
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom .sp-card-txt p {
     font-size: 1.5rem;

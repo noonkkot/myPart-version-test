@@ -48,7 +48,7 @@
         slidesPerView: 1,
         // centeredSlides: true,
         // freeMode : false,
-        spaceBetween : 20,
+        spaceBetween : 25,
 
         // 터치 관련 옵션 추가
         touchEventsTarget: 'container',
