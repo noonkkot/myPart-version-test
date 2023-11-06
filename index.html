@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/custom.js"></script>
+</head>
+<body>
+  <section id="main">
+    <div class="inner">
+      <div class="main-flex">
+        <div id="main-hero">
+          <div class="hero-txt">
+            <h2>iPhone 15 Pro</h2>
+            <h3>티타늄. 초강력. 초경량. 초프로.</h3>
+            <div class="hero-link">
+              <a href="https://www.apple.com/kr/iphone-15-pro/">더 알아보기</a>
+              <a href="https://www.apple.com/kr/shop/buy-iphone/iphone-15-pro">구입하기</a>
+            </div>
+          </div>
+          <div class="hero-img">
+          </div>
+        </div>
+        <div id="main-icon">
+          <div class="swiper-container">
+            <div class="icon-container swiper-wrapper">
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/buy-mac">Mac</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">iPhone</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">iPad</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">Apple Watch</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">AirPods</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">AirTag</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">Apple TV 4K</a></div>
+              </div>
+              <div class="icon-item swiper-slide">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="#">액세서리</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="special">
+    <div class="inner">
+      <div class="sp-cardWrap">
+        <div class="sp-title">
+          <span>Specialist</span>
+          <h2><span>도움의 손길.</span>언제든, 당신에게 맞는 방식으로.</h2>
+        </div>
+        <div class="sp-card">
+          <div id="box1" class="sp-card-left " onclick="openPopup('popup1')">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <h2>APPLE 스페셜리스트</h2>
+              <p>스페셜리스트와 함께하는 일대일 쇼핑. 온라인에서도 매장에서도.</p>
+            </div>
+          </div>
+          <div class="sp-card-mdl">
+            <div id="box2" class="sp-card-mdl-top" onclick="openPopup('popup2')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>무료 개인 맞춤 세션으로 새 기기와 더 친숙해지세요.
+              </div>
+            </div>
+            <div id="box3" class="sp-card-mdl-bottom" onclick="openPopup('popup3')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>Genius Bar에서 직접 전문가의 도움을 받을 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sp-card-right">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <p>모든 Apple 제품에 대한 지원을 한 곳에서 확인해 보세요.</p>
+            </div>
+          </div>
+          <div class="sp-card-bottom">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <p>몇 가지 정보를 확인해 주시면 가장 적합한 해결 방법을 알려 드리겠습니다. 전화, 채팅, 이메일 등을 통해 문의해 주세요.</p>
+            </div>
+            <button>지금 시작하기</button>
+          </div>
+        </div>
+      </div>
+      <div class="sp-mb-cardWrap swiper-container">
+        <div class="sp-mb-title">
+          <span>Specialist</span>
+          <h2><span>도움의 손길.</span>언제든, 당신에게 맞는 방식으로.</h2>
+        </div>
+        <div class="sp-mb-card swiper-wrapper">
+          <div id="box1" class="sp-mb-card-left swiper-slide" onclick="openPopup('popup1')">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <h2>APPLE 스페셜리스트</h2>
+              <p>스페셜리스트와 함께하는 일대일 쇼핑. 온라인에서도 매장에서도.</p>
+            </div>
+          </div>
+          <div class="sp-mb-card-mdl swiper-slide">
+            <div id="box2" class="sp-mb-card-mdl-top" onclick="openPopup('popup2')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>무료 개인 맞춤 세션으로 새 기기와 더 친숙해지세요.
+              </div>
+            </div>
+            <div id="box3" class="sp-mb-card-mdl-bottom" onclick="openPopup('popup3')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>Genius Bar에서 직접 전문가의 도움을 받을 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sp-mb-card-right swiper-slide">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <p>모든 Apple 제품에 대한 지원을 한 곳에서 확인해 보세요.</p>
+            </div>
+          </div>
+          <div class="sp-mb-card-bottom swiper-slide">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <p>몇 가지 정보를 확인해 주시면 가장 적합한 해결 방법을 알려 드리겠습니다. 전화, 채팅, 이메일 등을 통해 문의해 주세요.</p>
+            </div>
+            <button>지금 시작하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="special-pop">
+      <div id="popup1" class="popup">
+        <div class="popup-content">
+          <span onclick="closePopup('popup1')"></span>
+          <h2>도움을 받아 알맞은 제품을 찾으세요.</h2>
+          <p>스페셜리스트와 함께하는 일대일 온라인 쇼핑. Apple Store 쇼핑 세션도 예약할 수 있습니다.</p>
+          <a href="https://contactretail.apple.com/Help">스페셜리스트와 함께하는 온라인 쇼핑</a><br>
+          <a href="https://www.signtime.apple/retail/kr-KO/ksl">대한민국 수어로 문의하기<span></span></a><br>
+          <a href="https://www.apple.com/kr/retail/instore-shopping-session/">매장 쇼핑 세션 예약하기<span></span></a><br>
+        </div>
+      </div>
+      <div id="popup2" class="popup">
+        <div class="popup-content">
+          <span onclick="closePopup('popup2')"></span>
+          <h2>기초부터 고급 팁까지 모두 알려드립니다.</h2>
+          <p>Apple에서 새 기기를 구입하고 무료 일대일 개인 맞춤 세션을 통해 기기를 최대한 활용하는 방법을 배워보세요.</p>
+          <p>온라인으로 주문하신 제품이 출고되면 온라인 세션을 예약하실 수 있도록 초대를 보내 드립니다. 매장에서 구입하거나 픽업하실 때는 스페셜리스트가 새 기기에 익숙해지도록 도와 드리죠.</p>
+          <a href="https://www.apple.com/kr/shop/personal-session">더 알아보기<span></span></a>
+        </div>
+      </div>
+      <div id="popup3" class="popup">
+        <div class="popup-content">
+          <span onclick="closePopup('popup3')"></span>
+          <h2>지원을 받고, 수리 서비스도 예약하세요. 간단합니다.</h2>
+          <p>온라인에서 전화, 채팅, 이메일로 Apple 지원 서비스를 받아보세요. 가까운 매장을 방문해 직접 서비스를 받아볼 수도 있죠. 전문가들이 기기 설정부터 Apple ID 복구, 액정 교체까지 모든
+            걸 도와 드립니다.</p>
+          <a href="https://www.apple.com/kr/retail/geniusbar/">온라인으로 지원 받기<span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
