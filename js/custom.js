@@ -35,7 +35,6 @@
     }
   });
 
-  
   // Specialist Swiper 초기화 함수
   function initSwiper() {
     var screenWidth = window.innerWidth;

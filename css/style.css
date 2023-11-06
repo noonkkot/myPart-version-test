@@ -409,7 +409,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
     padding: 20px;
   }
   #special .sp-cardWrap .sp-card .sp-card-right .sp-card-img {
-    transform: translateY(5%);
+    transform: translateY(7%);
   }
   #special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-img {
     width: 100%; height: 100%;
@@ -437,7 +437,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 /* sp-card title */
   #special .sp-mb-cardWrap .sp-mb-title {
-    width: 100%; height: 10%; 
+    width: 100%; height: auto; 
     line-height: 1.3;
   }
 
