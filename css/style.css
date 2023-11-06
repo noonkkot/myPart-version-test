@@ -437,7 +437,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 /* sp-card title */
   #special .sp-mb-cardWrap .sp-mb-title {
-    width: 100%; height: auto; 
+    width: 100%; height: auto; margin-bottom: 10px;
     line-height: 1.3;
   }
 
