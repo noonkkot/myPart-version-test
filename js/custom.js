@@ -35,6 +35,42 @@
     }
   });
 
+  // main-icon link part
+  var clickableIcons = document.getElementsByClassName('clickable-icon');
+
+  for (var i = 0; i < clickableIcons.length; i++) {
+    clickableIcons[i].addEventListener('click', function() {
+      var id = this.id;
+      switch (id) {
+        case 'iconLink1':
+          location.href = 'https://www.apple.com/kr/shop/buy-mac';
+          break;
+        case 'iconLink2':
+          location.href = 'https://www.apple.com/kr/shop/buy-iphone';
+          break;
+        case 'iconLink3':
+          location.href = 'https://www.apple.com/kr/shop/buy-ipad';
+          break;
+        case 'iconLink4':
+          location.href = 'https://www.apple.com/kr/shop/buy-watch';
+          break;
+        case 'iconLink5':
+          location.href = 'https://www.apple.com/kr/airpods/';
+          break;
+        case 'iconLink6':
+          location.href = 'https://www.apple.com/kr/shop/accessories/all/airtag';
+          break;
+        case 'iconLink7':
+          location.href = 'https://www.apple.com/kr/apple-tv-4k/';
+          break;
+        case 'iconLink8':
+          location.href = 'https://www.apple.com/kr/shop/accessories/all';
+          break;
+        // 나머지 div들도 동일하게 추가
+      }
+    });
+  }
+
 
 
 
