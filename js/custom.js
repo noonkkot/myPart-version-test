@@ -9,12 +9,9 @@
         pagination: true,
         paginationClickable : true,
         slidesPerView : 'auto',
-        // spaceBetween="30",
-        // centeredSlides : true,
         direction : "horizontal",
         loop: true,
         freeMode: true,
-        // autoHeight: 'true',
 
         // If you need pagination
         pagination: {
@@ -27,13 +24,10 @@
           prevEl: ".swiper-button-prev",
         }
 
-        // And if we need scrollbar
-        // scrollbar: {
-        //   el: ".swiper-scrollbar",
-        // },
       });
     }
   });
+
 
   // main-icon link part
   var clickableIcons = document.getElementsByClassName('clickable-icon');
@@ -66,17 +60,11 @@
         case 'iconLink8':
           location.href = 'https://www.apple.com/kr/shop/accessories/all';
           break;
-        // 나머지 div들도 동일하게 추가
       }
     });
   }
 
 
-
-
-
-
-  
   // Specialist Swiper 초기화 함수
   function initSwiper() {
     var screenWidth = window.innerWidth;
@@ -87,8 +75,6 @@
       swiperContainer.classList.add('swiper');
       var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
-        // centeredSlides: true,
-        // freeMode : false,
         spaceBetween : 25,
 
         // 터치 관련 옵션 추가
@@ -110,6 +96,7 @@
   // 페이지 로드 시 및 창 크기 변경 시 스와이프 초기화 및 파괴 함수 호출
   window.addEventListener('load', initSwiper);
   window.addEventListener('resize', initSwiper);
+
 
   // specialist pop-up part
   // 팝업 열기
