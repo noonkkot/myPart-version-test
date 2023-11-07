@@ -569,6 +569,9 @@ body {font-family: 'Noto Sans KR', sans-serif; }
     transition: .3s ease-in-out;
     text-align: center;
     background-color: #fff;
+    background-image: url(../images/special-img5-b.jpg);
+    background-position: left;
+    background-size: cover;
   }
 
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom:hover {
@@ -577,7 +580,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom .sp-card-img {
     width: 100%; height: 100%;
-    background: url(../images/special-img5.jpg) no-repeat bottom / auto;
+    background: url(../images/special-img5-1.jpg) no-repeat bottom / contain;
   }
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom .sp-card-txt p {
     font-size: 1.5rem;
