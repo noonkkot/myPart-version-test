@@ -8,7 +8,7 @@
   // main-icon swiper part
   document.addEventListener("DOMContentLoaded", function () {
     var screenWidth = window.innerWidth;
-    if (screenWidth < 1200, screenWidth > 0) {
+    if (screenWidth < 1200 && screenWidth > 0) {
       var mySwiper = new Swiper("#main-icon .swiper-container", {
         // Optional parameters
         pagination: true,
@@ -28,7 +28,6 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }
-
       });
     }
   });
@@ -68,36 +67,42 @@
     });
   }
 
-  // mobile specialist slide section
-  var swiper;
-    function initSwiper() {
-        if (window.innerWidth <= 600, window.innerWidth > 0) {
-            swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween : 25,
-                // 터치 관련 옵션 추가
-                touchEventsTarget: 'container',
-                touchRatio: 1,
-                touchAngle: 45,
-                grabCursor: true
-            });
-        } else {
+
+  // Specialist Swiper part
+  var mySwiper;
+
+  function initSwiper() {
+      if (window.innerWidth <= 600) {
+          if (!mySwiper) {
+              mySwiper = new Swiper('.sp-mb-cardWrap', {
+                  slidesPerView: 1,
+                  spaceBetween : 25,
+                  // 터치 관련 옵션 추가
+                  touchEventsTarget: 'container',
+                  touchRatio: 1,
+                  touchAngle: 45,
+                  grabCursor: true
+              });
+          }
+      } else {
           if (mySwiper) {
               mySwiper.destroy();
               mySwiper = undefined;
           }
       }
-    }
+  }
+  window.addEventListener('load', function() {
+      initSwiper();
+  });
 
-    // 페이지 로드시 swiper 초기화
-    window.addEventListener('load', function () {
-        initSwiper();
-    });
+  window.addEventListener('resize', function() {
+      initSwiper();
+  });
 
-    // 창 크기 변경 시 swiper 초기화
-    window.addEventListener('resize', function () {
-        initSwiper();
-    });
+  // 페이지 로드 시 및 창 크기 변경 시 스와이프 초기화 및 파괴 함수 호출
+  window.addEventListener('load', initSwiper);
+  window.addEventListener('resize', initSwiper);
+
 
   // specialist pop-up part
   // 팝업 열기
