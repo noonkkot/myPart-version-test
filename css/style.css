@@ -698,6 +698,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   .popup-content {
     width: 90%;
     height: auto;
+    padding: 66px;
     box-sizing: border-box;
   }
 }

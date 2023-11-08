@@ -1,5 +1,10 @@
   'use strict';
 
+  // main-hero link part
+  function redirectToApple() {
+    location.href = "https://www.apple.com/kr/iphone-15-pro/";
+  }
+
   // main-icon swiper part
   document.addEventListener("DOMContentLoaded", function () {
     var screenWidth = window.innerWidth;
@@ -10,7 +15,7 @@
         paginationClickable : true,
         slidesPerView : 'auto',
         direction : "horizontal",
-        loop: true,
+        // loop: true,
         freeMode: true,
 
         // If you need pagination
@@ -27,7 +32,6 @@
       });
     }
   });
-
 
   // main-icon link part
   var clickableIcons = document.getElementsByClassName('clickable-icon');
@@ -64,39 +68,36 @@
     });
   }
 
-
-  // Specialist Swiper 초기화 함수
-  function initSwiper() {
-    var screenWidth = window.innerWidth;
-    var swiperContainer = document.querySelector('.swiper-container');
-
-    // 599px 이하에서 스와이프 초기화
-    if (screenWidth < 600 && !swiperContainer.classList.contains('swiper')) {
-      swiperContainer.classList.add('swiper');
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween : 25,
-
-        // 터치 관련 옵션 추가
-        touchEventsTarget: 'container',
-        touchRatio: 1,
-        touchAngle: 45,
-        grabCursor: true,
-        // 스와이프에 대한 추가 옵션
-      });
+  // mobile specialist slide section
+  var swiper;
+    function initSwiper() {
+        if (window.innerWidth <= 600, window.innerWidth > 0) {
+            swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween : 25,
+                // 터치 관련 옵션 추가
+                touchEventsTarget: 'container',
+                touchRatio: 1,
+                touchAngle: 45,
+                grabCursor: true
+            });
+        } else {
+          if (mySwiper) {
+              mySwiper.destroy();
+              mySwiper = undefined;
+          }
+      }
     }
 
-    // 600px 이상에서 스와이프 파괴
-    if (screenWidth >= 600 && swiperContainer.classList.contains('swiper')) {
-      swiperContainer.classList.remove('swiper');
-      swiper.destroy();
-    }
-  }
+    // 페이지 로드시 swiper 초기화
+    window.addEventListener('load', function () {
+        initSwiper();
+    });
 
-  // 페이지 로드 시 및 창 크기 변경 시 스와이프 초기화 및 파괴 함수 호출
-  window.addEventListener('load', initSwiper);
-  window.addEventListener('resize', initSwiper);
-
+    // 창 크기 변경 시 swiper 초기화
+    window.addEventListener('resize', function () {
+        initSwiper();
+    });
 
   // specialist pop-up part
   // 팝업 열기
