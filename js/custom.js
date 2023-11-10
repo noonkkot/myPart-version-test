@@ -9,7 +9,7 @@ function redirectToApple() {
 document.addEventListener("DOMContentLoaded", function () {
   function initSwiper() {
       var screenWidth = window.innerWidth;
-      if (screenWidth < 1200 && screenWidth > 0) {
+      if (screenWidth < 1300 && screenWidth > 0) {
           var mySwiper = new Swiper("#main-icon .swiper-container", {
               // Optional parameters
               pagination: true,

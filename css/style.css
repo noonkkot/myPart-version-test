@@ -10,7 +10,7 @@
 }
 
 section {width: 100%; height: 100vh;}
-.inner {max-width: 75rem; margin: 0 auto;}
+.inner {max-width: 81.25rem; margin: 0 auto;}
 
 /* reset */
 * {margin: 0; padding: 0;}
@@ -133,6 +133,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   padding-left: 10px;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 
@@ -221,6 +222,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 }
 
 /* special */
+
 #special .sp-cardWrap {
   width: 100%; height: 100vh;
   padding: 20px 0;
@@ -229,7 +231,9 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
 /* sp-card title */
 #special .sp-cardWrap .sp-title {
-  width: 100%; padding: 10px; margin-bottom: 10px;
+  width: 100%; height: 120px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   box-sizing: border-box; 
   line-height: 1.3;
 }
@@ -238,6 +242,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   color: var(--accent-color);
   font-size: 0.875rem; /* 14px */
   margin-bottom: 5px;
+  display: inline-block;
 }
 
 #special .sp-cardWrap .sp-title h2 {
@@ -252,7 +257,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
 #special .sp-cardWrap .sp-card {
   width: 100%;
-  height: 90%; 
+  height: calc(100% - 120px); 
+  padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -268,7 +274,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 #special .sp-cardWrap .sp-card .sp-card-mdl .sp-card-mdl-top,
 #special .sp-cardWrap .sp-card .sp-card-mdl .sp-card-mdl-bottom,
 #special .sp-cardWrap .sp-card .sp-card-right,
-#special .sp-cardWrap .sp-card .sp-card-bottom {
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left,
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-right {
   border-radius: 20px; overflow: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -291,8 +298,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   background: url(../images/special-img1.jpg) no-repeat center / cover;
 }
 
-#special .sp-cardWrap .sp-card>div .sp-card-txt {
-  position: absolute;
+#special .sp-cardWrap .sp-card>div:not(:last-of-type) .sp-card-txt {
+  position: absolute; 
   top: 24px; left: 24px; right: 24px;
 }
 
@@ -342,6 +349,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   width: 100%;
   height: 100%;
   background: url(../images/special-img3.jpg) no-repeat center / cover;
+  transform: scale(1.5);
 }
 
 #special .sp-cardWrap .sp-card .sp-card-right {
@@ -358,62 +366,81 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
 #special .sp-cardWrap .sp-card .sp-card-right .sp-card-img {
   width: 100%; height: 100%;
-  background: url(../images/special-img4.jpg) no-repeat bottom center / contain;
-  transform: translateY(20%);
+  background: url(../images/special-img4.jpg) no-repeat bottom / contain;
+  transform: translateY(30%) 
 }
 
+/* sp-card-bottom */
 #special .sp-cardWrap .sp-card .sp-card-bottom {
-  order: 4; position: relative;
-  width: 100%; height: 40%;
-  margin-top: 20px;
-  transition: .3s ease-in-out;
-  text-align: center;
-  background-color: #fff;
+  order: 4;/*  display: flex; flex-direction: row; */
+  height: 40%;
+  margin-top: 20px; 
+  width: 60%;
 }
 
-#special .sp-cardWrap .sp-card .sp-card-bottom:hover {
+/* sp-card-bottom-left */
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left {
+  order: 5; text-align: center;  box-sizing: border-box;
+  /* width: calc((100% - 20px)  * 6);  */flex: 6; height: 100%; 
+  transition: .3s ease-in-out; position: relative;
+  
+}
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left:hover {
   transform: scale(1.01);
 }
-
-#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-img {
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left .sp-card-img {
   width: 100%; height: 100%;
-  background: url(../images/special-img5.jpg) no-repeat bottom / contain;
+  background: url(../images/special-img5-b.png) no-repeat center / cover;
 }
-#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-txt p {
-  font-size: 1.25rem;
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left .sp-card-txt {
+  width: 100%; height: 100%; position: absolute; top: 24px; 
+}
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left .sp-card-txt p {
+  font-size: 1.25rem;  box-sizing: border-box; padding: 0 24px;
+  display: inline-block;
+
 }
 
-#special .sp-cardWrap .sp-card .sp-card-bottom button {
-  position: absolute; top: 0; transform: translate(-50%, 150%);
-  background-color: #000;
-  border-radius: 20px; border: none; padding: 12px 20px; 
+#special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left .sp-card-txt a {
+  text-align: center; display: inline-block;
+  width: 8rem; height: 3rem;
+  background-color: #000; line-height: 3rem;
+  box-sizing: border-box; margin-top: 30px;
+  border-radius: 20px; border: none;
   color: #fff; font-weight: 700;
   font-size: 1rem; letter-spacing: -1px;
 }
 
-#special .sp-cardWrap .sp-card .sp-card-bottom button:hover {
-  cursor: pointer;
+#special>.inner {
+  position: relative;
+}
+#special>.inner>.sp-bg-img {
+  position: absolute; right: 0; bottom: 0; 
+  width: 50%; height: 40%; z-index: 10;
+}
+#special>.inner>.sp-bg-img span {
+  display: block;
+  width: 100%; height: 100%; 
+  background: url(../images/special-img5-1.png) no-repeat right bottom / contain;
 }
 
 #special .sp-mb-cardWrap {
   display: none;
-}
+} 
 
-@media (min-width: 600px) and (max-width: 1199px) {
+
+
+@media (min-width: 600px) and (max-width: 1299px) {
   html {font-size: 14px;}
   #special .sp-cardWrap {
     padding: 20px;
   }
   #special .sp-cardWrap .sp-card .sp-card-right .sp-card-img {
-    transform: translateY(7%);
+    transform: translateY(15%);
   }
-  #special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-img {
-    width: 100%; height: 100%;
-    background: url(../images/special-img5.jpg) no-repeat / contain;
+  #special .sp-cardWrap .sp-card .sp-card-bottom .sp-card-bottom-left .sp-card-img {
+  
     background-position-y: bottom;
-  }
-  #special .sp-cardWrap .sp-card .sp-card-bottom button {
-    transform: translate(-50%, 200%);
   }
 }
 
@@ -434,7 +461,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
 /* sp-card mobile title */
   #special .sp-mb-cardWrap .sp-mb-title {
-    width: 100%; height: auto; margin-bottom: 10px;
+    width: 100%; height: auto;
+    padding: 20px 0 10px; box-sizing: border-box;
     line-height: 1.3;
   }
 
@@ -456,7 +484,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
 
   #special .sp-mb-cardWrap .sp-mb-card {
     width: 100%;
-    height: 90%; 
+    height: 85%; 
+    margin: 20px 0;
     display: flex;
     flex-wrap: nowrap;
     box-sizing: border-box;
@@ -469,8 +498,8 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-left,
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl .sp-mb-card-mdl-top,
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl .sp-mb-card-mdl-bottom,
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right,
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom {
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-top,
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom {
     border-radius: 20px; overflow: hidden;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
@@ -492,7 +521,7 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 
   #special .sp-mb-cardWrap .sp-mb-card>div .sp-card-txt {
-    position: absolute;
+    position: absolute; 
     top: 24px; left: 24px; right: 24px;
   }
 
@@ -510,24 +539,28 @@ body {font-family: 'Noto Sans KR', sans-serif; }
     color: #000;
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl { 
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl,
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right { 
     display: flex;
     flex-direction: row;
     flex-wrap : wrap;
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl>div {
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl>div,
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right>div {
     position: relative; width: 100%; 
     transition: .3s ease-in-out;
-    box-sizing: border-box;    
+    box-sizing: border-box;
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl>div:hover {
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl>div:hover,
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right>div:hover {
     cursor: pointer;
     transform: scale(1.01);
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl .sp-mb-card-mdl-top {
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl .sp-mb-card-mdl-top,
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-top {
     margin-bottom: 20px;
   }
 
@@ -537,57 +570,60 @@ body {font-family: 'Noto Sans KR', sans-serif; }
   }
 
   #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-mdl .sp-mb-card-mdl-bottom .sp-card-img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     background: url(../images/special-img3.jpg) no-repeat center / cover;
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right {
-    box-sizing: border-box; 
-    position: relative; transition: .3s ease-in-out;
-    background-color: #fff;
-  }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right:hover {
-    cursor: pointer;
-    transform: scale(1.01);
-  }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-card-img {
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-top .sp-card-img {
     width: 100%; height: 100%;
     background: url(../images/special-img4.jpg) no-repeat bottom center / contain;
+    transform: translateY(30%);
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom {
-    position: relative;
-    width: 100%; height: 100%;
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom {
+    position: relative; width: 100%;
     transition: .3s ease-in-out;
     text-align: center;
     background-color: #fff;
     background-image: url(../images/special-img5-b.jpg);
-    background-position: left;
-    background-size: cover;
+    background-position: bottom;
+    background-size: 120%;
+    background-repeat: no-repeat;
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom:hover {
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom:hover {
     transform: scale(1.01);
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom .sp-card-img {
+
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom .sp-card-img {
     width: 100%; height: 100%;
-    background: url(../images/special-img5-1.jpg) no-repeat bottom / contain;
   }
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom .sp-card-txt p {
-    font-size: 1.5rem;
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom .sp-card-img span {
+    width: 100%; height: 100%; display: block;
+    position: absolute; bottom: 0; right: 0; left: 0;
+    background: url(../images/special-img5-1.png) no-repeat bottom / cover;
+    transform: scale(0.7) translateY(30%) ;
+    
+  }
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom .sp-card-txt p {
+    font-size: 1.5rem;  box-sizing: border-box; padding: 0 24px;
+    display: block;
+  }
+  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-right .sp-mb-card-right-bottom .sp-card-txt a {
+    text-align: center; display: inline-block;
+    width: 10rem; height: 4rem;
+    background-color: #000; line-height: 4rem;
+    box-sizing: border-box; margin-top: 20px;
+    border-radius: 20px; border: none;
+    color: #fff; font-weight: 700;
+    font-size: 1.2rem; letter-spacing: -1px;
   }
 
-  #special .sp-mb-cardWrap .sp-mb-card .sp-mb-card-bottom button {
-    position: absolute; top: 0px; transform: translate(-50%, 280%);
-    background-color: #000;
-    border-radius: 20px; border: none; padding: 12px 20px; 
-    color: #fff; font-weight: 700;
-    font-size: 1rem; letter-spacing: -1px;
-    cursor: pointer;
+  #special>.inner>.sp-bg-img {
+    display: none;
   }
 }
 
